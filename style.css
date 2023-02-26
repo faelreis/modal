@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    list-style: none;
+    color: #101010;
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+body {
+    background-color: #101010;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 124.6rem;
+    margin: 0 auto;
+    padding: 0rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.btn-open{
+    padding: 2rem 4rem;
+    background-color: #e6e6e6;
+    color: #050505;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid #e6e6e6;
+    transition: all .5s ease;
+}
+
+.btn-open:hover{
+    background-color: #e6e6e600;
+    color: #E6E6E6;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s ease;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.modal.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal.active .box{
+    transform: translateY(0);
+}
+
+.modal .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #8181815c;
+    z-index: 0;
+}
+
+.modal .box{
+    position: relative;
+    z-index: 2;
+    width: 60rem;
+    height: 60rem;
+    border-radius: 2rem;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(25px);
+    transition: all .3s ease;
+}
+
+.modal .box .btn-close{
+    position: absolute;
+    right: 0;
+    top: -55px;
+    padding: 10px 20px;
+    background-color: rgb(207, 40, 40);
+    color: #050505;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.modal .box .btn-close:hover{
+    background-color: rgba(207, 40, 40, 0.76);
+}
+
+.modal .box img{
+    margin-bottom: 2rem;
+    width: 70%;
+}
